@@ -1,0 +1,10 @@
+# get information out of a string
+
+
+string='x-stry blabal 0.845 '
+
+zeroIndex=string.find('0')
+spaceIndex=string.find(' ',zeroIndex)
+
+myNumber=string[zeroIndex:spaceIndex]
+print(myNumber)

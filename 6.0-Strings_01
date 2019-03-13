@@ -1,0 +1,16 @@
+# this is a simple excersise to reversre the carecters
+
+baseWord=''
+convWord=''
+maxindex=len(baseWord)-1
+currentIndex=0
+
+baseWord=input('please enter string to reversre :')
+
+for letter in(baseWord):
+    newIndex=maxindex- currentIndex
+    convWord=convWord+baseWord[newIndex]
+    currentIndex=currentIndex+1
+
+print('the org word ',baseWord)
+print('the reverseded version is ',convWord)
