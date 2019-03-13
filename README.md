@@ -1,2 +1,2 @@
 # py4a
-Python code
+Python exerc from the curse
