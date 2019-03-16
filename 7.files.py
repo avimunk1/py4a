@@ -4,8 +4,9 @@
 fileH=''
 count=0
 line=''
+mylines=list()
 
-fileH=open('mbox-short.txt')
+fileH=open('inputs'+"/mbox-short.txt")
 
 print('this is my list')
 print('=============')
@@ -15,9 +16,9 @@ for line in fileH:
         continue
     line=line.strip()
     count=count+1
-    print(line)
+    mylines.append(line)
+
 
 print('=============')
 print('this is the no of rows '+str(count))
-# chi
-#im making changes
+print('these are the rows that met with the condition',mylines)
