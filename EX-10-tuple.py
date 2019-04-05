@@ -3,15 +3,14 @@
 
 inputFile='romeo.txt'
 inputPath='inputs/'
-file=inputPath+inputFile
 
 try:
-    fileH=open('inputs/'+inputFile)
+    fileH=open(inputPath + inputFile)
 except:
     print('no such file '+file)
     exit()
 
-fileH=open('inputs/'+inputFile)
+fileH=open(inputPath + inputFile)
 
 wordCount=dict()
 
@@ -30,7 +29,7 @@ for line in fileH:
 lst1.sort()
 #print(lst1)
 
-print(wordCount)
+print(lst1)
 
 
 
