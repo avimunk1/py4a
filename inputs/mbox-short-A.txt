@@ -1,4 +1,9 @@
-12X-DSPAM-Confidence: 0.1
-X-DSPAM-Confidence: 0.5
-X-DSPAM-Confidence: 1.6
-123      X -DSPAM-Confidence: 1.4444    000
+From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+From: stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+
+From louis@media.berkeley.edu Fri Jan  4 18:10:48 2008
+Return-Path: <postmaster@collab.sakaiproject.org>
+Received: from murder (mail.umich.edu [141.211.14.97])
+	 by frankenstein.mail.umich.edu (Cyrus v2.3.8) with LMTPA;
+	 Fri, 04 Jan 2008 18:10:48 -0500
