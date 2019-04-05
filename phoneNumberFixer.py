@@ -59,6 +59,11 @@ AltPhone=''
 newMobilePhone=''
 newPhoneSatus=''
 outFilH=open(outPutFile,"w+")
+from openpyxl import Workbook
+wb = Workbook()
+excelLine=1
+excelColmn=1
+ws = wb.active
 for line in fileH:
     fileLine=line.split(',')
     ExtId=fileLine[0]
@@ -67,12 +72,20 @@ for line in fileH:
     MobilePhone=fileLine[3]
     newMobilePhone=fixNumeric(MobilePhone)
     newMobilePhone=fixPrefix(newMobilePhone)
-    #print(newMobilePhone)
     newPhoneSatus=checkMobilePhone(newMobilePhone)
-    outFilH.write(ExtId+',')
-    outFilH.write(FirstName+',')
-    outFilH.write(LastName+',')
-    outFilH.write(MobilePhone+',')
-    outFilH.write(newMobilePhone+',')
-    outFilH.write(newPhoneSatus+'\n')
-outFilH.close()
+
+    d = ws.cell(row=excelLine, column=excelColmn, value=ExtId)
+    excelColmn=excelColmn+1
+    d = ws.cell(row=excelLine, column=excelColmn, value=FirstName)
+    excelColmn=excelColmn+1
+    d = ws.cell(row=excelLine, column=excelColmn, value=LastName)
+    excelColmn=excelColmn+1
+    d = ws.cell(row=excelLine, column=excelColmn, value=MobilePhone)
+    excelColmn=excelColmn+1
+    d = ws.cell(row=excelLine, column=excelColmn, value=newMobilePhone)
+    excelColmn=excelColmn+1
+    d = ws.cell(row=excelLine, column=excelColmn, value=newPhoneSatus)
+    excelColmn=excelColmn+1
+    excelLine=excelLine+1
+    excelColmn=1
+wb.save('avitemp.xlsx')
